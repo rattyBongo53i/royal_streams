@@ -1,42 +1,165 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary-color: #712a83; 
+    --secondary-color: #f7f7f7;
+    --color-danger : #dc3545;
+    --color-success : #0d8027;
+    --color-warning : #ffc107;
+    --color-dark : #343a40;
+    --color-light : #f8f9fa;
+    --color-info : #17a2b8;
+    --color-white : #fff;
+    --color-black : #000;
+    --color-info-light: #c3e6ec;
+    --color-info-dark: #0f6674;
+    --color-success-light: #d4edda;
+    --color-success-dark: #1e7e34;
+    --color-warning-light: #fff3cd;
+    --color-warning-dark: #664d03;
+    --color-danger-light: #f8d7da;
+    --color-primary-variant: #8b3e9e;
+    --color-secondary-variant: #e2e3e5;
+    --color-dark-variant: #212529;
+    --color-light-variant: #f8f9fa;
+    --color-background: #dce0e4;
+    --color-default-gray: #6c757d;
+    --color-default-gray-light: #fcfbff;
+    --color-default-green:  #378383;
+    --color-default-green-medium: #3f8989;
+    --color-default-green-light: #c3e6ec;
+    --color-default-green-dark: #0f6674;
+
+    --card-border-radius: 2rem;
+    --card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem rgba(--color-light);
+
+}
+    /* ------------ dark theme variables ----------- */
+    .dark-theme-variables {
+
+        --color-background: #181a1e;
+        --color-white: #202528;
+        --color-dark: #edeffd;
+        --color-dark-variant: #a3bdcc;
+        --color-light: rgba(0, 0, 0, 0.4);
+        --color-secondary-variant: #2b2d31;
+        --box-shadow: 0 2rem 3rem var(--color-light);
+    }
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline : 0;
+    border : 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    list-style: none;
+    
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html {
+    font-size: 14px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    background-color: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color : var(--color-dark);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container {
+    display: grid;
+    width : 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
 }
 
-.card {
-  padding: 2em;
+a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+img{
+    display: block;
+    width: 100%;
 }
 
-.read-the-docs {
-  color: #888;
+h1{
+    font-size: 1.8rem;
+    font-weight: 800;
 }
+h2{
+    font-size: 1.4rem;
+}
+h3 {
+    font-size: 0.87rem;
+}
+h4 {
+    font-size: 0.8rem;
+}
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    /* object-fit: cover; */
+    overflow: hidden;
+}
+.text-muted {
+    color: var(--color-dark);
+}
+
+p {
+    color : var(--color-dark-variant);
+}
+
+b {
+    color: var(--color-dark);
+}
+.primary {
+    color: var(--primary-color);
+}
+.secondary {
+    color: var(--secondary-color);
+}
+.danger {
+    color: var(--color-danger);
+}
+.success {
+    color: var(--color-success);
+}
+.warning {
+    color: var(--color-warning);
+}
+.dark {
+    color: var(--color-dark);
+}
+.light {
+    color: var(--color-light);
+}
+
