@@ -1,12 +1,17 @@
-// import { useState } from "react";
+import { useEffect } from "react";
 // import styled from "styled-components";
 // import React from 'react'
 // import { Link, useNavigate } from "react-router-dom";
-// import { useState } from "react";
 import "../Styles/login.css";
 import logo from "../assets/logo.png";
 
 const Login = () => {
+    
+  // set page title
+  useEffect(() => {
+    document.title = "RSI | Login";
+  }, []);
+
   return (
     <div className="login-wrapper ">
       <img src={logo} alt="brand" />
@@ -16,7 +21,7 @@ const Login = () => {
         <div className="input-group">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             placeholder="Username"
             required
           />
@@ -24,7 +29,7 @@ const Login = () => {
         <div className="input-group">
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             placeholder="Password"
             required
           />
