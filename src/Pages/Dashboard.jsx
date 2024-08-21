@@ -205,18 +205,29 @@ const Dashboard = () => {
           </div>
           {/* sidebar starts here */}
           <div className="sidebar">
-            <Link to="#" className="active link">
+            <a href="#">
               <span className="material-symbols-sharp">apps </span>
               <h3>Dashboard</h3>
-            </Link>
-            <Link to="#" className="link">
+            </a>
+            <a href="#">
               <span className="material-symbols-sharp">pending</span>
-              <h3>Students</h3>
-            </Link>
-            <Link to="#">
-              <span className="material-symbols-sharp">logout </span>
-              <h3>logout</h3>
-            </Link>
+              <h3>Pending</h3>
+              <span className="pending-count"> 26 </span>
+            </a>
+
+            <a href="#">
+              <span className="material-symbols-sharp">manage_accounts</span>
+              <h3>Profile</h3>
+            </a>
+            <a href="#" className="active">
+              <span className="material-symbols-sharp">settings</span>
+              <h3>Settings</h3>
+            </a>
+
+            <a href="#">
+              <span className="material-symbols-sharp">logout</span>
+              <h3>Logout</h3>
+            </a>
           </div>
           {/* aside ends here */}
         </aside>
