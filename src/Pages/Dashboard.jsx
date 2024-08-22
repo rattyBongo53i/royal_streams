@@ -206,26 +206,26 @@ const Dashboard = () => {
           {/* sidebar starts here */}
           <div className="sidebar">
             <a href="#">
-              <span className="material-symbols-sharp">apps </span>
+              <span class="material-symbols-outlined">grid_view</span>
               <h3>Dashboard</h3>
             </a>
             <a href="#">
-              <span className="material-symbols-sharp">pending</span>
+              <span className="material-symbols-outlined">pending</span>
               <h3>Pending</h3>
               <span className="pending-count"> 26 </span>
             </a>
 
             <a href="#">
-              <span className="material-symbols-sharp">manage_accounts</span>
+              <span className="material-symbols-outlined">manage_accounts</span>
               <h3>Profile</h3>
             </a>
             <a href="#" className="active">
-              <span className="material-symbols-sharp">settings</span>
+              <span className="material-symbols-outlined">settings</span>
               <h3>Settings</h3>
             </a>
 
             <a href="#">
-              <span className="material-symbols-sharp">logout</span>
+              <span className="material-symbols-outlined">logout</span>
               <h3>Logout</h3>
             </a>
           </div>
