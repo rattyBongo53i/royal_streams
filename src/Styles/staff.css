@@ -1,0 +1,122 @@
+.search{
+    width: 90%;
+    height: 130px;
+    background-color: var(--primary-color);
+    color: var(--color-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.8rem;
+    margin: 0 auto;
+}
+
+.search .left{
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+    justify-content: flex-start;
+
+}
+.search .left span {
+    color: var(--color-light);
+    font-size: 1.2rem;
+    text-align: start;
+    margin: 0 auto;
+    /* display: flex; */
+    padding: 0 0.1rem;
+      display: inline-block;
+      width: 100%;
+
+}
+.search .left span:nth-child(1){
+    font-weight: bold;
+    font-size: large;
+}
+.search .right{
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    justify-content: flex-start;
+
+}
+
+.search .right input{
+    width: 100%;
+    padding: 0.5rem 0.2rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+}
+
+.search .right input:focus{
+    outline: none;
+    border: 1px solid var(--color-light);
+}
+
+.search .right .btn-container{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.search .right button{
+    padding: 0.5rem 1rem;
+    background-color: var(--color-light);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    width: 20%;
+    display: inline-block;
+    justify-content: flex-end;
+    font-weight: 600;
+}
+
+.search .right button:hover{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.table-responsive{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center !important;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.pagination-box{
+    /* text-right w-full border-2 border-green-700 */
+    /* border: 2px solid green; */
+    width: 100%;
+    padding: 0.2rem 0.2rem;
+     display: flex;
+     justify-content: space-between;
+}
+.pagination-box .add-new{
+    width: 70%;
+}
+.pagination-box .add-new a{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+.pagination-box .add-new span{
+    font-size: 1.5rem;
+    color: var(--color-light);
+    padding: 0.5rem 0.8rem;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin-left: -0.4rem;
+}
+.table-responsive table tr td:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+    padding: -0.7rem 0;
+}
+
+.table-responsive table th:last-child{
+    width: 10%;
+    /* display: none; */
+}

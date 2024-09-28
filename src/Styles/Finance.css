@@ -1,0 +1,212 @@
+.finance-wrapper{
+   display: grid;
+    grid-template-columns: 15rem auto;
+    gap: 0.4rem;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: var(--background-color);
+    margin: 0 auto;
+    transition: all 300ms ease;
+}
+
+.finance-wrapper .left{
+    /* display: none; */
+    display: block;
+}
+.finance-content{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    /* background-color: var(--color-dark-variant); */
+    padding: 0;
+    width: 100%;
+    overflow-y: scroll;
+    height: 100vh;
+    /* border: 1px solid red; */
+
+}
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge add Firefox */
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+  }
+
+finance-content::-webkit-scrollbar, -scrollbar {
+    display: none;
+}
+.top-nav{
+    padding: 0;
+    width: 50%;
+    z-index: 11;
+    margin-bottom: -1rem;
+    scale: 0.8.8;
+}
+.top-nav .navbar{
+    /* border: 2px solid red; */
+    padding: 0.3rem 0.4rem;
+    cursor: pointer;
+}
+ .nav-item{
+  color: var(--pirmary-color) !important;
+  /* display: none; */
+}
+.menu-icon {
+  display: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  /* cursor: pointer !important; */
+  color: var(--color-dark);
+
+}
+
+
+.box{
+    width: 100%;
+    height: 49vh;
+    /* border: 3px solid white; */
+    display: grid;
+    grid-template-columns: auto 16rem;
+    gap: 0.5rem;
+}
+
+.box-left{
+    display: block;
+    height: 78vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: var(--padding-1);
+}
+
+.box-left .chart{
+    width: 100%;
+    height: 48vh;
+    background-color: var(--background-color);
+
+}
+
+.box-right{
+    width: 100%;
+    padding:  0.1rem;
+
+}
+
+.table-wrapper{
+    width: 100%;
+    /* position: relative; */
+    /* border: 3px solid rosybrown; */
+    padding: 0.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+   
+}
+.table-one{
+    /* border: 1px solid rgb(130, 22, 22); */
+    width: 61%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.table-two{
+    /* border: 1px solid rgb(33, 130, 22); */
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.table-one .heading{
+    padding: 1rem 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.table-area-double{
+    width: 70%;
+    border-radius: 12px;
+
+    padding: var(--padding-1);
+}
+
+.table-area-double .first-table{
+    width: 70%;
+    padding: 0.5rem 0.1rem;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    background-color: var(--color-light);
+}
+.table-area-double .second-table{
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-light);
+    border-radius: 7px;
+}
+/* ================== media queries smaller tablets and mobile ==================== */
+@media screen and (max-width: 768px) {
+
+    .finance-wrapper {
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: 100vh;
+    } 
+    .finance-wrapper .left{
+      display: none;
+    }
+
+      .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    transition: left 0.3s ease;
+    background-color: #4CAF50;
+    align-items: center;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 20px 0;
+  }
+
+
+}

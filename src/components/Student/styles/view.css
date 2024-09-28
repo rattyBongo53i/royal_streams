@@ -1,0 +1,36 @@
+.student-content{
+    width: 100%;
+}
+.student-content .navigation{
+    /* display: inline-block; */
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    width: 250px;
+    align-items: center;
+    padding: 0.3rem 0.6rem;
+    /* justify-content: space-around; */
+    margin-left: 2rem;
+    width: 120px;
+    /* border: 2px solid red; */
+}
+
+.student-content .content-area{
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+    /* margin-to: rem; */
+}
+.student-content .content-area .heading{
+    background-color: var(--color-default-gray);
+    color: var(--color-light);
+    padding: 0.8rem;
+    width: 100%;
+    font-size: large;
+    border-radius: 8px 8px 0 0;
+}
+.fake-right{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem;
+}
