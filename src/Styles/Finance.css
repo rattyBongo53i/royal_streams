@@ -23,7 +23,6 @@
     width: 100%;
     overflow-y: scroll;
     height: 100vh;
-    /* border: 1px solid red; */
 
 }
 .scrollbar-hidden::-webkit-scrollbar {
@@ -47,7 +46,6 @@ finance-content::-webkit-scrollbar, -scrollbar {
     scale: 0.8.8;
 }
 .top-nav .navbar{
-    /* border: 2px solid red; */
     padding: 0.3rem 0.4rem;
     cursor: pointer;
 }
