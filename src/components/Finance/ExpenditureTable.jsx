@@ -5,7 +5,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const ExpenditureTable = ({ open, setOpen }) => {
+const ExpenditureTable = ({ open, setOpen, setLoading }) => {
   const [expense, setExpense] = useState([]);
   const [newExpense, setNewExpense] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,6 +17,9 @@ const ExpenditureTable = ({ open, setOpen }) => {
       (async () => {
         let response = await fetch(url);
         let data = await response.json();
+        if (response.status == 200 || response.status == 201) {
+          setLoading(false);
+        }
         setExpense(data);
         // console.log(data);
       })();
@@ -57,6 +60,7 @@ const ExpenditureTable = ({ open, setOpen }) => {
   return (
     <>
       <div className="expenditureTable-area">
+     
         <table>
           <thead>
             <th>Expense</th>

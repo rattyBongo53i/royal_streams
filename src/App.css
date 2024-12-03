@@ -176,11 +176,15 @@ b {
 }
 
 aside {
-  height: 100vh;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 90vh;
   width: 100%;
   /* background-color: rgb(112, 105, 105); */
   border-right: 2px solid rgba(0, 0, 0, 0.2);
   box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 14px;
+  background-color: var(--color-light);
 }
 
 aside .top {
@@ -223,7 +227,7 @@ aside .close,
 aside .sidebar {
   display: flex;
   flex-direction: column;
-  height: 86vh;
+  height: 66vh;
   position: relative;
   top: 1rem;
 }
@@ -391,6 +395,9 @@ aside .sidebar .pending-count {
   padding: 2px 10px;
   border-radius: var(--border-radius-1);
 }
+  .mobile-navigation{
+    display: none;
+  }
 
 /* =========== Main ============ */
 
@@ -743,23 +750,45 @@ main .bucket {
   .wrapper {
     grid-template-columns: 7rem auto 23rem;
   }
-
+  aside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-left: 9px;
+    margin-top: 5vh;
+  }
   aside .logo h2 {
     display: none;
   }
   aside .logo {
-    display: none;
+    /* display: none; */
+    margin-top: -44px ;
+    scale: 0.8;
+  }
+  aside .sidebar {
+    text-align: center;
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    height: 70vh;
+    width: 10vw;
+    margin-top: -5px;
   }
   aside .sidebar h3 {
     display: none;
   }
   aside .sidebar a {
-    width: 5.6rem;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
   }
 
   aside .sidebar a {
     position: relative;
-    margin-top: 1.8rem;
+    /* margin-top: 1.8rem; */
   }
 
   main .insights {
@@ -793,7 +822,7 @@ main .bucket {
     height: 100vh;
   }
 
-  aside {
+  /* aside {
     position: fixed;
     left: -100%;
     height: 100vh;
@@ -806,7 +835,7 @@ main .bucket {
     padding: var(--card-padding);
     display: none;
     animation: showMenu 300ms ease forwards;
-  }
+  } */
 
   @keyframes showMenu {
     to {
@@ -814,37 +843,48 @@ main .bucket {
     }
   }
 
-  .sidebar-mobile {
-    /* display:block; */
+  aside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-left: 9px;
+    margin-top: 5vh;
+    display: none;
   }
-
-  /* aside .logo h2 {
-        display: inline;
-    } */
-  aside .logo {
-    display: inline;
-    margin-left: 1rem;
-  }
-  aside .sidebar h3 {
-    display: inline;
-  }
-
-  aside .sidebar a {
-    height: 3.5rem;
+  .mobile-navigation{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
     width: 100%;
+    height: 14vh;
+    background-color: var(--primary-color);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+      text-decoration: none;
   }
 
-  aside .sidebar a:last-child {
-    bottom: 8rem;
-    position: absolute;
+  .mobile-navigation a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-light);
+    font-size: 1.6rem;
+    
   }
-
-  aside .close {
-    display: inline-block;
-    cursor: pointer;
-    /* position: absolute;
-        top: 0;
-        left: 0; */
+  .mobile-navigation a span{
+    font-size: 2rem;
+  }
+  .mobile-navigation a.active{
+    color: var(--color-light);
+    /* display: none; */
   }
 
   main {

@@ -51,3 +51,24 @@
   font-size: 1.5rem;
   color: #f8f9fa;   
 }
+
+.display-none{
+  display: none;
+}
+
+.load{
+  display: flex;
+}
+
+.waiting-effect{
+  font-size: 2rem;
+  color: #f8f9fa;
+  width: 45%;
+  margin: 0 auto;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: all 0.7s ease;
+}

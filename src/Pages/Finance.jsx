@@ -1,6 +1,6 @@
 import React from 'react'
 import "../Styles/dashboard.css";
-import "../Styles/Finance.css";
+import "../Styles/finance.css";
 // import logo from "../assets/logo-bg.png";
 import Sidebar from "../components/Sidebar";
 import Index from "../components/Finance/Begin";

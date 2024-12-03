@@ -6,6 +6,9 @@
 - the shedule on the create invoice page automatically sets the due date for the invoice. that is each term has a duration of at least three month, however the user should be able to view and edit invoices with late payments
 - https://app.mailgun.com/dashboard?tab=send
 
+- [] page for resisting password
+- [] page for regeristering new user
+
 
   	--server smtp.mailgun.org \
   	--au postmaster@sandbox92240616d1e141bfb3e3fcecc1b68f3f.mailgun.org \
@@ -16,3 +19,13 @@
  -- https://www.youtube.com/shorts/GlKCUZw3uvo
  -- https://www.youtube.com/shorts/CoomhQN76Ek
  -- https://www.youtube.com/shorts/kOsqjMTzbFg
+
+## crm 
+- https://crms.dreamstechnologies.com/html/template/contacts.html
+
+
+
+## TO DO LIST
+
+- edit the load student to show class names as well
+- edit the load fees to show fee amount 

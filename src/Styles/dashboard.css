@@ -147,3 +147,10 @@
   margin: 0 10px;
   font-size: 16px;
 }
+.reloadedButton {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}

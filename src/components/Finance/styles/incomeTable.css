@@ -90,6 +90,10 @@ tr {
     width: 130px;
     /* display: none !important; */
 }
+
+
+
+
 .expenditureTable-area{
     width: 100%;
     display: flex;
@@ -98,8 +102,41 @@ tr {
     align-items: center;
     justify-content: end;
     font-size: 0.9rem;
+    /* display: none; */
 }
 .remove-deleted{
     transform: translateY(10rem) rotateZ(25deg);
     opacity: 0;
+}
+
+.spinner-container{
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* Full page height */
+  width: 45%;
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* text-align: center; */
+  /* margin: 0 auto; */
+  /* display: none; */
+  transition: all 0.7s ease;
+  z-index:9999;
+  border: 3px solid red;
+}
+
+ .spinner{
+  border: 6px solid #f3f3f3; /* Light grey */
+  border-top: 6px solid var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

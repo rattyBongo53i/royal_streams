@@ -34,3 +34,106 @@
     justify-content: space-between;
     padding: 0.2rem;
 }
+button.submit-info:hover{
+  background-color: var(--color-light) !important;
+  transition: background-color 0.3s ease-in-out;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color);
+}
+
+/* Styling the input field */
+.custom-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #4CAF50;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  outline: none;
+}
+
+.custom-input:focus {
+  border-color: #008CBA;
+  box-shadow: 0 0 5px rgba(0, 140, 186, 0.5);
+}
+
+/* Styling the datepicker popup */
+.react-datepicker {
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-datepicker__header {
+  background-color: #4CAF50;
+  border-bottom: none;
+  color: white;
+}
+
+.react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
+  background-color: #008CBA;
+  color: white;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f1f1f1;
+  border-radius: 50%;
+}
+
+.react-datepicker__day--today {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.react-datepicker__month-container {
+  padding: 10px;
+}
+
+.dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* color: red; */
+    max-height: 200px;
+    overflow-y: auto;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.dropdown li {
+    padding: 10px;
+    cursor: pointer;
+        /* color: red; */
+}
+
+.dropdown li:hover {
+    background-color: #f0f0f0;
+        /* color: red; */
+}
+
+.student-details {
+    margin-top: 20px;
+   /* color: red; */
+}
+
+.single-student, .table-striped {
+transition: all 0.7s ease-in-out;
+}
+
+.load{
+  display: block;
+}
+
+.display-none{
+  display: none;
+}
+
+.create-student{
+  width: 14% !important;
+  padding:  0.3rem 0 !important;
+  margin: 0 auto;
+  font-size: large !important;
+
+}

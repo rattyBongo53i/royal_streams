@@ -72,7 +72,7 @@ const Staff = () => {
                   placeholder="Family Name"
                 />
                 <div className="btn-container">
-                  <button type="button" class=" btn-submit">
+                  <button type="button" className=" btn-submit">
                     Go
                   </button>
                 </div>
@@ -84,20 +84,20 @@ const Staff = () => {
                 <div className="pagination-box">
                   <div className="add-new">
                     <Link to="/create-family">
-                      <span class="material-symbols-outlined">add</span>
+                      <span className="material-symbols-outlined">add</span>
                       add
                     </Link>
                   </div>
                   <div>
                     <button className="pagination-button">
                       {" "}
-                      <span class="material-symbols-outlined">
+                      <span className="material-symbols-outlined">
                         chevron_left
                       </span>{" "}
                     </button>
                     <button className="pagination-button">
                       {" "}
-                      <span class="material-symbols-outlined">
+                      <span className="material-symbols-outlined">
                         chevron_right
                       </span>
                     </button>

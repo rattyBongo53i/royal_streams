@@ -11,7 +11,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import logo from "../../../src/assets/logo-bg.png";
 import { motion } from "framer-motion";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+// import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const Invoices = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -585,9 +585,9 @@ const Invoices = () => {
                         <div className="email">
                           <span>isaac2.yeboah@gmail.com</span>
                         </div>
-                        <label class="checkbox-container">
+                        <label className="checkbox-container">
                           <input type="checkbox" />
-                          <span class="custom-checkbox"></span>
+                          <span className="custom-checkbox"></span>
                         </label>
                       </div>
                       <div className="recipients">
@@ -595,9 +595,9 @@ const Invoices = () => {
                         <div className="email">
                           <span>eyison@gmail.com</span>
                         </div>
-                        <label class="checkbox-container">
+                        <label className="checkbox-container">
                           <input type="checkbox" />
-                          <span class="custom-checkbox"></span>
+                          <span className="custom-checkbox"></span>
                         </label>
                       </div>
                       <div className="recipients">
@@ -605,9 +605,9 @@ const Invoices = () => {
                         <div className="email">
                           <span>adminuser@mail.com</span>
                         </div>
-                        <label class="checkbox-container">
+                        <label className="checkbox-container">
                           <input type="checkbox" />
-                          <span class="custom-checkbox"></span>
+                          <span className="custom-checkbox"></span>
                         </label>
                       </div>
                     </div>

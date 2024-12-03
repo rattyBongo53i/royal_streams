@@ -49,7 +49,11 @@ const handleFeeCategoryChange = (e) => {
 
     const deleteInvoice = async (e, id) => {
       e.preventDefault();
-      // alert(id);
+      // confirm
+      let answer = window.confirm("are you sure of the delete?");
+      if (!answer) {
+        return;
+      }
       try {
         setRemovingUser(id);
         // Wait for animation to finish (0.5s, matching CSS animation duration)

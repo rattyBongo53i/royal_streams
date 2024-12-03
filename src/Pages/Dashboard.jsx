@@ -19,6 +19,20 @@ const Dashboard = () => {
     // alert('Toggle')
     };
 
+  //refresh cache
+  useEffect(() => {
+    try {
+      const url = `${import.meta.env.VITE_App_API_URL}/refresh-alls-cache`;
+      (async () => {
+        let response = await fetch(url);
+        let data = await response.json();
+        // console.log(data);
+       })
+    } catch (error) {
+       console.error("Error fetching expenditure:", error);
+    }
+  },[])
+
   // set page title
   useEffect(() => {
     document.title = "RSI | Dashboard";
@@ -55,25 +69,8 @@ const Dashboard = () => {
   }
  
 
-  const Wrapper = styled.div`
-    display: grid;
-    grid-template-columns: 14rem auto 22rem;
-    gap: 1rem;
-    width: 100%;
-    overflow: hidden;
-    overflow-y: auto;
-    background-color: var(--background-color);
-    margin: 0 auto;
 
-    //media queries
-    @media screen and (max-width: 1200px) {
-      grid-template-columns: 7rem auto 23rem;
-    }
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      width: 100%;
-    }
-  `;
+
 
   return (
     <>
@@ -97,6 +94,7 @@ const Dashboard = () => {
                 onChange={handleDateChange}
               />
             </div>
+     
 
             <div className="insights">
               <div className="sales">

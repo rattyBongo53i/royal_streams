@@ -19,7 +19,8 @@ import Card from '../Card';
 
 const Index = () => {
     const [show, setShow] = useState(false);
-    const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
 
 
   // set page title
@@ -74,6 +75,7 @@ const Index = () => {
               icon={<FaChartPie />}
             />
             <Card title="Net Profit" value="₵30,000" icon={<FaChartLine />} />
+            
           </div>
         </div>
       </div>
@@ -90,7 +92,11 @@ const Index = () => {
           </div>
           <IncomeTable show={show} setShow={setShow} />
         </div>
-        <div className="table-two">
+ 
+        <div className={`waiting-effect ${loading ? "load" : "display-none"}`}>
+          <div className="spinner"> </div>
+        </div>
+        <div className={`table-two ${loading ? "display-none" : "load"}`}>
           <div className="heading">
             <h2>Expenditure </h2>
             <div className="add-new expenditure">
@@ -100,7 +106,7 @@ const Index = () => {
               </button>{" "}
             </div>
           </div>
-          <ExpenditureTable open={open} setOpen={setOpen} />
+          <ExpenditureTable setLoading={setLoading} open={open} setOpen={setOpen} />
         </div>
       </div>
     </>

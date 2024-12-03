@@ -16,6 +16,7 @@ import Invoices from "./components/Finance/Invoices";
 import EditFamily from "./components/Family/edit";
 import CreateFamily from "./components/Family/create";
 import EditStudent from "./components/Student/edit";
+import CreateStudent from "./components/Student/create";
 
 import { AnimatePresence } from "framer-motion";
 import Sandbox from "./Pages/Sandbox";
@@ -47,7 +48,8 @@ function App() {
             <Route path="/edit-invoices/:id" element={<Invoices />} />
             <Route path="/edit-family/:id" element={<EditFamily />} />
             <Route path="/create-family" element={<CreateFamily />} />
-            <Route path="/edit-student/:id" element={<EditStudent/>}/>
+            <Route path="/edit-student/:id" element={<EditStudent />} />
+            <Route path="/create-student" element={<CreateStudent />} />
           </Routes>
         </Fragment>
       </AnimatePresence>

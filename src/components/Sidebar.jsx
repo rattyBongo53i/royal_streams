@@ -6,6 +6,9 @@ const Sidebar = ({ toggleSidebar, isMenuOpen }) => {
   const location = useLocation();
   const [isActive, setIsActive] = useState(false);
   const [isFinanceActive, setIsFinanceActive] = useState(false);
+  const [isMobileDashboardActive, setIsMobileDashboardActive] = useState(false);
+  const [isMobileFeesActive, setIsMobileFeesActive] = useState(false);
+  const [isMobileStudentActive, setIsMobileStudentActive] = useState(false);
 
 
   useEffect(() => {
@@ -15,8 +18,6 @@ const Sidebar = ({ toggleSidebar, isMenuOpen }) => {
     console.log(urlPath);
 
     const checkFinanceLink = (url) => {
-      console.log("inside check finance link function");
-      console.log(url);
       if (url.includes("/invoice")) {
         setIsFinanceActive(true);
       }
@@ -25,7 +26,28 @@ const Sidebar = ({ toggleSidebar, isMenuOpen }) => {
           setIsFinanceActive(true);
         }
     }
-  
+    const checkMobileActive = url => {
+      if (url.includes("/dashboard")) {
+        setIsMobileDashboardActive(true);
+      }
+      //
+        if (url.includes("/finance")) {
+          setIsMobileFeesActive(true);
+      }
+              if (url.includes("/invoice")) {
+                setIsMobileFeesActive(true);
+              }
+              if (url.includes("/edit-invoice")) {
+                setIsMobileFeesActive(true);
+              }
+              if (url.includes("/edit-invoices")) {
+                setIsMobileFeesActive(true);
+              }
+              if (url.includes("/students")) {
+                setIsMobileStudentActive(true);
+      }
+      
+    }
     checkFinanceLink(urlPath);
     //clean up
     return () => {
@@ -35,7 +57,7 @@ const Sidebar = ({ toggleSidebar, isMenuOpen }) => {
 
   return (
     <>
-      <aside>
+      <aside className="shadow-2xl">
         <div className="top">
           <div className="logo">
             <img src={logo} alt="" />
@@ -99,60 +121,32 @@ const Sidebar = ({ toggleSidebar, isMenuOpen }) => {
         </div>
         {/* aside ends here */}
       </aside>
-
-      {/* mobile */}
-      <div className={`sidebar-mobile ${isMenuOpen ? "block" : "none"}`}>
-        <div className="top">
-          <div className="logo">
-            <img src={logo} alt="" />
-          </div>
-          <div className="close" id="close-btn" onClick={() => toggleSidebar()}>
-            <span className="material-symbols-outlined">close</span>
-          </div>
-        </div>
-        {/* sidebar starts here */}
-        <div className="sidebar">
-          <a href="#" className="active">
-            <span className="material-symbols-outlined">grid_view</span>
-            <h3>Dashboard</h3>
-          </a>
-          <a href="#">
-            <span className="material-symbols-outlined">pending</span>
-            <h3>Fee Management</h3>
-            {/* <span className="pending-count"> 26 </span> */}
-          </a>
-
-          <a href="#">
-            <span className="material-symbols-outlined">manage_accounts</span>
-            <h3>Teachers</h3>
-          </a>
-          <a href="#" className="">
-            <span className="material-symbols-outlined">settings</span>
-            <h3>Classes</h3>
-          </a>
-          <a href="#">
-            <span className="material-symbols-outlined">manage_accounts</span>
-            <h3>Staff Management</h3>
-          </a>
-          <a href="#" className="">
-            <span className="material-symbols-outlined">settings</span>
-            <h3>Reports</h3>
-          </a>
-          <a href="#" className="">
-            <span className="material-symbols-outlined">settings</span>
-            <h3>Assignments</h3>
-          </a>
-          <a href="#" className="">
-            <span className="material-symbols-outlined">settings</span>
-            <h3>Settings</h3>
-          </a>
-
-          <a href="#">
-            <span className="material-symbols-outlined">logout</span>
-            <h3>Logout</h3>
-          </a>
-        </div>
-        {/* aside ends here */}
+      <div className="mobile-navigation">
+        <NavLink
+          to="/dashboard"
+          className={` ${isMobileDashboardActive ? "active" : ""}`}
+        >
+          <span className="material-symbols-outlined">grid_view</span>
+          <h3>dashboard</h3>
+        </NavLink>
+        <NavLink
+          to="/finance"
+          className={` ${isMobileFeesActive ? "active" : ""}`}
+        >
+          <span className="material-symbols-outlined">pending</span>
+          <h3>fees</h3>
+        </NavLink>
+        <NavLink
+          to="/students"
+          className={` ${isMobileStudentActive ? "active" : ""}`}
+        >
+          <span className="material-symbols-outlined">manage_accounts</span>
+          <h3>Students</h3>
+        </NavLink>
+        <NavLink className={`${false ? "active" : "flex"} `}>
+          <span className="material-symbols-outlined">logout</span>
+          <h3>Logout</h3>
+        </NavLink>
       </div>
     </>
   );

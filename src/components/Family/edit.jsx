@@ -76,7 +76,7 @@ const edit = () => {
             </div>
             <div className="navigation">
               <Link to="/create-family">Add New Family</Link>
-              <span class="material-symbols-outlined">chevron_right</span>
+              <span className="material-symbols-outlined">chevron_right</span>
 
               <Link to="/staff">Manage Family</Link>
             </div>
