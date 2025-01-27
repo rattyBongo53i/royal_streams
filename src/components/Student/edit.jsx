@@ -31,7 +31,7 @@ const EditStudent = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_App_API_URL}/student/${id}`)
+      .get(`${import.meta.env.VITE_App_API_URL}/get-student/${id}`)
       .then((response) => {
         if (response.status == 200 || response.status == 201) {
           setStudent(response.data);

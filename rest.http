@@ -1,0 +1,123 @@
+
+POSt http://localhost:4000/api/match-data
+content-type: application/json
+
+{
+      "url" : "https://www.betway.com.gh/sport/soccer/eng/fa_cup,_qualification/braintree_town_fc-v-heybridge_swifts/0?datefilter=202209201845"
+
+}
+###
+POSt http://localhost:4000/api/match-data
+content-type: application/json
+
+{
+      "url" : "https://www.betway.com.gh/sport/soccer/eng/fa_cup,_qualification/braintree_town_fc-v-heybridge_swifts/0?datefilter=202209201845"
+}
+
+###
+GET https://freedom-cash.herokuapp.com/api/get-all-matches
+content-type: application/json
+
+
+###
+POST https://freedom-cash.herokuapp.com/api/alg-create-locations
+content-type: application/json
+
+{
+      "name" : "Ontario",
+      "zip"  : "K6V 9Z9",
+      "longitude" : "45.0000",
+      "latitude" : "-75.0000",
+      "city" : "Ontario"
+
+}
+
+###
+
+POST https://freedom-green.herokuapp.com/api/registerEmployer
+content-type: application/json
+
+{
+
+     "first_name" : "Kojo",
+     "last_name"  : "Oduro",
+     "email"      : "kojo@mail.com",
+     "company"   : "Codjosoft LLC",
+     "password" : "saints24"
+
+}
+
+
+###
+POST https://manage.royalstreamsinternational.org/api/rsi/login
+content-type: application/json
+
+{
+
+     "email"      : "msbee.boa@gmail.com",
+     "password" : "admin1234"
+}
+
+
+###
+GET https://freedom-green.herokuapp.com/api/getEmployersEmployees/5
+
+
+###
+GET https://freedom-green.herokuapp.com/api/get-ordable-employer
+
+
+###  getOTP/{email}
+
+# POST https://freedom-green.herokuapp.com/api/onBoardEmployer
+POST https://freedom-green.herokuapp.com/api/onBoardEmployer
+content-type: application/json
+
+    {
+            "firstname" : "Michael",
+                "lastname" : "Murdoch",
+                "company" : "Purpose Driven Ministries",
+            "email" : "murdoch@purposedrivenminitries.com",
+            "password" : "saints24",
+}
+
+### 
+GET http://localhost:9090/api/rsi/refresh-alls-cache
+###
+GET https://api.royalstreamsinternational.org/students
+
+###
+GET https://app.royalstreamsinternational.org/index.php?action=getAllStudents
+
+###
+GET http://localhost:9090/api/rsi/refresh-alls-cache
+
+###
+GET https://api.royalstreamsinternational.org/fees
+
+###
+
+POST https://app.royalstreamsinternational.org/index.php?action=login
+content-type: application/json
+
+{
+
+     "email"      : "msbee.boa@gmail.com",
+     "password" : "admin1234"
+}
+
+
+###
+POST https://api.royalstreamsinternational.org/login
+content-type: application/json
+
+{
+
+     "email"      : "msbee.boa@gmail.com",
+     "password" : "admin1234"
+}
+
+
+
+
+ 

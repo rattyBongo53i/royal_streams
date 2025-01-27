@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import "../base.css";
 import "../components/Finance/styles/invoice.css"
@@ -36,7 +36,7 @@ const Invoice = () => {
   const [show, setShow] = useState(false);
   const [emailShow, setEmailShow] = useState(false);
   const [totalAmount, setTotalAmount] = useState(0); // Final amount after
-  const [emailArray, setemailArray] = useState(""); // Payment status
+  // const [emailArray, setemailArray] = useState(""); // Payment status
 
   const handleOpen = () => setShow(true);
   const Fopen = () => setShow(false);
@@ -122,7 +122,7 @@ const Invoice = () => {
   }, []);
     useEffect(() => {
       try {
-        const url = `${import.meta.env.VITE_App_API_URL}/students`;
+        const url = `https://manage.royalstreamsinternational.org/api/rsi/students`;
         (async () => {
           let response = await fetch(url);
           let data = await response.json();
@@ -315,7 +315,7 @@ const Invoice = () => {
       if (response.status == 200 || response.status == 201) {
         toast.success("Invoice has been saved");
         // Reset form or state here after successful submission
-        setSelectedStudent(null);
+        // setSelectedStudent(null);
         setTotalAmount(0);
         setDiscount(0);
         setSelectedFees([]);
@@ -360,8 +360,9 @@ const Invoice = () => {
         console.error("Server responded with an error:", result);
         return false;
       }
-    } catch (e) {
-      console.error(e);
+    } catch (err) {
+      console.error(err);
+       toast.error("server error");
       return false;
     }
   };

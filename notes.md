@@ -1,3 +1,7 @@
+## Rand
+
+- https://www.msport.com/gh/discounts/240812041826ACT63121319/lucky_draw?share=1&wapShare=1&reload=app
+- https://web.facebook.com/reel/2402932933249124
 - https://www.youtube.com/shorts/h_GNYk3WSYs havana
 - https://www.youtube.com/shorts/rNIQnJ5Ba1Q funny scares
 - https://www.youtube.com/shorts/4ubraGyZgQg - mask off

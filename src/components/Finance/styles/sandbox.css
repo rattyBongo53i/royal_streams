@@ -1,0 +1,21 @@
+.firebase{
+    width: 89%;
+    height: 7vh;
+    padding: 0.3rem 0.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: white;
+    width: 13%;
+    height: 4vh;
+    border-radius: 8px;
+}
+.btn:hover{
+color: var(--primary-color);
+border: 2px solid var(--primary-color);
+background-color: white;
+}

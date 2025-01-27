@@ -175,6 +175,10 @@ b {
   color: var(--color-light);
 }
 
+.top-right button{
+
+    border-radius: 8px;
+}
 aside {
   margin-top: 20px;
   margin-left: 10px;
@@ -230,6 +234,7 @@ aside .sidebar {
   height: 66vh;
   position: relative;
   top: 1rem;
+  /* display: none; */
 }
 
 aside h3 {

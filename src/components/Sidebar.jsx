@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import logo from "../assets/logo-bg.png";
 import { NavLink, useLocation } from "react-router-dom";
+import { useAuth } from "../context/useAuth";
 
 const Sidebar = ({ toggleSidebar, isMenuOpen }) => {
+
   const location = useLocation();
+  const {  logout } = useAuth();
   const [isActive, setIsActive] = useState(false);
   const [isFinanceActive, setIsFinanceActive] = useState(false);
   const [isMobileDashboardActive, setIsMobileDashboardActive] = useState(false);
@@ -54,6 +57,11 @@ const Sidebar = ({ toggleSidebar, isMenuOpen }) => {
       setIsActive(false);
     }
   }, []);
+
+  const logoutUser = () => {
+    alert("logout");
+    logout();
+  }
 
   return (
     <>
@@ -115,8 +123,12 @@ const Sidebar = ({ toggleSidebar, isMenuOpen }) => {
           </NavLink>
 
           <a href="#" className="logout">
-            <span className="material-symbols-outlined">logout</span>
-            <h3>Logout</h3>
+             <span className="material-symbols-outlined">logout</span>
+            <div className="top-right">
+            <button className="button" onClick={logout}>
+              logout
+            </button>
+          </div>
           </a>
         </div>
         {/* aside ends here */}
